@@ -1,0 +1,124 @@
+:root{
+    --text-h1-primary:#ffffff00;
+    --text-h1-secondary:#ffffff;
+    --transition-speed1:300ms;
+    --text-primary: #f1f0f0;
+    --text-secondary: #f7f1f1;
+    --bg-primary: #ffffff00;
+    --bg-secondary: #ffffffa5;
+}
+.fireworks{
+    z-index: -20;
+    margin-top: -420px;
+}
+svg{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: 190px;
+  margin-left: -50px;
+
+  animation: rotate 1s linear infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -2s);
+
+  animation-iteration-count: 2;
+  animation-fill-mode: both;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+header{
+    padding-top: 0em;
+    padding-bottom:6em;
+    animation: gradient 10s ease infinite alternate;
+}
+ul{
+    list-style-type: none;
+}
+li{
+    margin-top:1em;
+    margin-bottom:1em;
+}
+header h1{
+    text-align: center;
+    font-family: 'Kodchasan', sans-serif;
+    color: whitesmoke;
+    margin-top: 2em;
+    animation: logoappear 1s ease-in forwards;
+    font-size:5em;
+}
+#container{
+    width:300px;
+    height:300px;
+    position: relative;
+    background:skyblue;
+}
+#animation{
+    position:absolute;
+}
+ul.navbar{
+    padding:0px;
+    list-style-type: none;
+    margin-top: -20px;
+    position: sticky;
+
+
+}
+section{
+    margin-top: 1em;
+}
+.navbar li{  
+    margin: 5px;
+    display: inline-flexbox;
+
+}
+
+h3{
+    font-family: 'Kodchasan', sans-serif;
+    color:rgb(172, 172, 172);
+    padding-top: 1em;
+}
+
+a{
+    text-decoration: none;
+    color:rgb(172, 172, 172);
+
+}
+a:hover{
+    text-decoration: none;
+    color:rgb(172, 172, 172);
+}
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: transparent;
+    color:rgba(164, 164, 164, 0.612);
+}
+::-webkit-scrollbar-track{
+    color: transparent;
+}
+::-webkit-scrollbar-thumb{
+    background-color:rgba(164, 164, 164, 0.612);
+    border-radius: 16px;
+}
+section{
+    margin-left:20px;
+}
+
+@media screen and (max-width: 900px){
+
+}
+@keyframes gradient{
+    0%{background: #ff2222;}
+    25%{background:#dd2d2d;}
+    50%{background:#f12a2a;}
+    75%{background: #f13b3b;}
+    100%{background:#ff2222;}
+}
+@keyframes logoappear{
+        from{color:var(--text-h1-primary);}
+        to{color:var(--text-h1-secondary);}
+}
